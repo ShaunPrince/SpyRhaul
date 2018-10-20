@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 58113840598678914}
   m_Layer: 0
   m_Name: Fireball
-  m_TagString: Untagged
+  m_TagString: Fireball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -86,11 +86,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1421252982327080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe8f6f99312574244a5a558ca39df043, type: 3}
+  m_Script: {fileID: 11500000, guid: 404aaba61dd4e495283836439fe2d91a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  range: 2
+  speed: 4
+  range: 3
 --- !u!212 &212393652341791666
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -126,7 +126,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fb8adb4ee471b4d27a43135557097592, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 03993eb3e0e2d426e9acf1b001c50ff8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
