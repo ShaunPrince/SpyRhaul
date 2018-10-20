@@ -31,7 +31,7 @@ public class EnemyTarget : MonoBehaviour
         //Rotate to Find Player
         Vector3 dir = target.position - myTransform.position;
         var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        myTransform.Rotate(0, 0, angle, Space.Self);
+        myTransform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
 
 
