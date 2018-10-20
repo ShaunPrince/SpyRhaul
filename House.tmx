@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tileset version="1.2" tiledversion="1.2.0" name="House" tilewidth="100" tileheight="100" tilecount="1" columns="1">
+ <image source="Assets/Sprites/House.png" width="100" height="100"/>
+ <tile id="0" type="House">
+  <objectgroup draworder="index">
+   <object id="1" x="1" y="-2" width="100" height="100"/>
+  </objectgroup>
+ </tile>
+</tileset>
