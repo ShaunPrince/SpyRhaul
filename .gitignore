@@ -370,3 +370,6 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+
+#Library Unity
+/Library/
