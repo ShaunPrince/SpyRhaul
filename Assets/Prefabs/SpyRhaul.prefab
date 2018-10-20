@@ -54,6 +54,8 @@ GameObject:
   - component: {fileID: 4852505599859454}
   - component: {fileID: 114617735497656328}
   - component: {fileID: 114462391897732738}
+  - component: {fileID: 50472478090697700}
+  - component: {fileID: 58773357065864806}
   m_Layer: 0
   m_Name: SpyRhaul
   m_TagString: Untagged
@@ -99,7 +101,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1103858364655420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -0.53, z: 0}
+  m_LocalPosition: {x: -0.05, y: -0.53, z: -2}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 4852505599859454}
@@ -125,7 +127,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1304728157474480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4251164070284468}
@@ -216,6 +218,41 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1610016699929492}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!50 &50472478090697700
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1304728157474480}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &58773357065864806
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1304728157474480}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.02, y: -0.37}
+  serializedVersion: 2
+  m_Radius: 1.33
 --- !u!81 &81474660258214568
 AudioListener:
   m_ObjectHideFlags: 1
@@ -234,6 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa9e8fa7d6487c48a1dc57bce25a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  intelCount: 0
 --- !u!114 &114617735497656328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,10 +283,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be053a07edcba14ebccd7e84eaea2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 2
   backwardSpeed: 0.3
-  turnSpeed: 45
-  constantForwardSpeed: 0.5
+  turnSpeed: 2
+  constantForwardSpeed: 2
 --- !u!136 &136278049156901312
 CapsuleCollider:
   m_ObjectHideFlags: 1
