@@ -7,26 +7,38 @@ public class HUD_Manager : MonoBehaviour {
 
 	private Text textHealth;
 	private Text textIntel;
-	public IntelManager intelManager;
+	private Text textCooldown;
 	public PlayerHealth healthManager;
+	public IntelManager intelManager;
+	public FireballSpawner cooldownManager;
 
 	// Use this for initialization
 	void Start () {
-		textHealth = transform.Find("HealthCounter").GetComponentInChildren<Text>();	
-		textIntel = transform.Find("IntelCounter").GetComponentInChildren<Text>();	
+		textHealth = transform.Find("HealthCounter").GetComponent<Text>();	
+		textIntel = transform.Find("IntelCounter").GetComponent<Text>();	
+		textCooldown = transform.Find("CooldownCounter").GetComponent<Text>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		dispIntel(intelManager.intelCount);
-		dispHealth(healthManager.Health);
+		if(intelManager != null) dispIntel(intelManager.intelCount);
+		if(healthManager != null) dispHealth(healthManager.Health);
+		if(cooldownManager != null) dispCooldown(cooldownManager.getCooldown());
+	}
+
+	void dispHealth(int health){
+		textHealth.text = health.ToString() + "%";
 	}
 
 	void dispIntel(int intel){
 		textIntel.text = "Intel: " + intel.ToString(); 
 	}
 
-	void dispHealth(int health){
-		textHealth.text = health.ToString() + "%";
+	void dispCooldown(float cd){
+		if(cd > 0){
+			textCooldown.text = cd+"s";
+		} else {
+			textCooldown.text = "";
+		}
 	}
 }

@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class FireballMovement : MonoBehaviour {
 
-	public float speed = 10;
+	public float speed = 2;
+	public float range = 3;
 
 	private Rigidbody2D rb;
 
 	//needs to be awake so comes before fire
 	void Awake(){
 		rb = gameObject.GetComponent<Rigidbody2D>();
-		Debug.Log(rb.ToString());
 	}
 
 	//returns if fired
 	public void Fire(){
-		rb.AddForce(transform.up * speed);
+		rb.velocity = transform.up * speed;
+		Debug.Log("Firing");
+		Invoke("die", range/speed);
+	}
+
+	//kills the object
+	private void die(){
+		GameObject.Destroy(gameObject);
 	}
 	
 

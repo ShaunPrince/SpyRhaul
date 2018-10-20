@@ -272,6 +272,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114784610909598098, guid: 65cd161f05aad4508ad0edda141bc818,
+        type: 2}
+      propertyPath: cooldownManager
+      value: 
+      objectReference: {fileID: 648524296}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65cd161f05aad4508ad0edda141bc818, type: 2}
   m_IsPrefabAsset: 0

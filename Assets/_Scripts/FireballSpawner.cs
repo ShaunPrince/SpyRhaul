@@ -18,7 +18,6 @@ public class FireballSpawner : MonoBehaviour {
 	void Update () {
 		if(getCooldown() <= 0 && Input.GetButtonDown("fireball")){
 			GameObject ball = GameObject.Instantiate(prototype, spawnPoint.position, spawnPoint.rotation);
-			Debug.Log("Begin Firing");
 			FireballMovement fbMove = ball.GetComponent<FireballMovement>();
 			fbMove.Fire();
 			lastFire = Time.time;
