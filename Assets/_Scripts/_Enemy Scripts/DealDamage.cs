@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DealDamage : MonoBehaviour {
     // Use this for initialization
@@ -28,6 +29,11 @@ public class DealDamage : MonoBehaviour {
             health.Health -= enemyDamage;
             Debug.Log(health.Health);
             Destroy(collision.gameObject);
+            if(health.Health <= 0){
+                //Death Screen
+                SceneManager.LoadScene(sceneName: "DeathScene");
+
+            }
         }
     }
 
