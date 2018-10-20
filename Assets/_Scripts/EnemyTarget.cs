@@ -24,13 +24,16 @@ public class EnemyTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Move towards Player
+        Debug.Log(this.transform.up);
+        myTransform.Translate(this.transform.up * enemySpeed * Time.deltaTime, Space.World);
+
         //Rotate to Find Player
         Vector3 dir = target.position - myTransform.position;
         var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        myTransform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        myTransform.Rotate(0, 0, angle, Space.Self);
 
-        //Move towards Player
-        myTransform.Translate(new Vector3(enemySpeed * Time.deltaTime, 0, 0));
+
 
     }
 }

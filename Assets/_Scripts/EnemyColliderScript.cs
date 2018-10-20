@@ -16,7 +16,6 @@ public class EnemyColliderScript : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Physics2D.SetLayerCollisionMask(8, EnemyLayerMask);
-        Physics2D.IgnoreCollision(myTransform.GetComponent<CircleCollider2D>,);
     }
 	
 	// Update is called once per frame
