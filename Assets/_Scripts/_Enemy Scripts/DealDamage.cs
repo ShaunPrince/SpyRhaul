@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class DealDamage : MonoBehaviour {
     // Use this for initialization
+    public int enemyDamage = 30;
+    PlayerHealth health;
 
     private void Awake()
     {
-
+        health = gameObject.GetComponent<PlayerHealth>();
+        health.Health = 100;
     }
     void Start () {
 		
@@ -22,8 +25,9 @@ public class DealDamage : MonoBehaviour {
     {
         if (collision.tag == "Enemy")
         {
-
-            Debug.Log("HIT CONFIRMED");
+            health.Health -= enemyDamage;
+            Debug.Log(health.Health);
+            Destroy(collision.gameObject);
         }
     }
 

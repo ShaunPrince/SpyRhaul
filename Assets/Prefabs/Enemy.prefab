@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 50069417437370074}
   - component: {fileID: 58642485941487610}
   - component: {fileID: 114150685753882220}
+  - component: {fileID: 114699443164261922}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
@@ -52,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1374515677591880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.9, y: -8.1, z: 0}
+  m_LocalPosition: {x: 4.054394, y: -2.4578226, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4486506103553426}
@@ -85,7 +86,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -106,7 +107,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.13, y: 0}
   serializedVersion: 2
-  m_Radius: 1.25
+  m_Radius: 0.8
 --- !u!114 &114150685753882220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,7 +119,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c753805ea7e4525ae05b409f3d568d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 10
+  enemySpeed: 1.5
+--- !u!114 &114699443164261922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1374515677591880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440f0aed5b3a14f4795bb0a57cdaa1d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireball: {fileID: 1421252982327080, guid: 64f0c2dac276a47d394b2ee6a63350e6, type: 2}
 --- !u!212 &212825020344181316
 SpriteRenderer:
   m_ObjectHideFlags: 1
