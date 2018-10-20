@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyTarget : MonoBehaviour
 {
 
-    private Rigidbody2D target; //Enemy Target
-    public int enemySpeed = 3; //Enemy Speed
+    private Transform target; //Enemy Target
+    public float enemySpeed = 1.5f; //Enemy Speed
     //public  int rotationSpeed = 3; //Turning Speed
 
     private Rigidbody2D r;
@@ -18,19 +18,19 @@ public class EnemyTarget : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        target = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>(); //Target Player
+        target = GameObject.FindWithTag("Player").transform; //Target Player
     }
 
     // Update is called once per frame
     void Update()
     {
         //Move towards Player
-        r.transform.Translate(new Vector3(enemySpeed * Time.deltaTime, 0, 0));
+        r.velocity = (this.transform.right * enemySpeed);
 
         //Rotate to Find Player
-        Vector3 dir = target.position - r.position;
+        Vector3 dir = target.position - r.transform.position;
         var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        r.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        r.rotation = angle;
 
 
 
