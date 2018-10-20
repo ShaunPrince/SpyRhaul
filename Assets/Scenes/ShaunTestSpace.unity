@@ -152,6 +152,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212551344442794132, guid: 3c193fefba6155448bcba00e05eac7ec,
+        type: 2}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c193fefba6155448bcba00e05eac7ec, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &714243901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1304728157474480, guid: 3c193fefba6155448bcba00e05eac7ec,
+    type: 2}
+  m_PrefabInternal: {fileID: 506595177}
+--- !u!58 &714243902
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 714243901}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.37}
+  serializedVersion: 2
+  m_Radius: 1.25
