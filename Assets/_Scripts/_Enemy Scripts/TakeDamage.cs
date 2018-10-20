@@ -15,10 +15,11 @@ public class TakeDamage : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Fireball"){
 
+            Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
     }
