@@ -38,6 +38,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4090811072032108}
+  - component: {fileID: 114236418340836050}
   m_Layer: 0
   m_Name: Intel
   m_TagString: Untagged
@@ -159,3 +160,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114236418340836050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1877854441888166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d994df693718746853fa15bfcafab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 1213098035851240, guid: 5f07da880758d2c4c9f1710b34249e7a,
+    type: 2}
+  arrowColor: {r: 1, g: 0.6154237, b: 0, a: 1}
