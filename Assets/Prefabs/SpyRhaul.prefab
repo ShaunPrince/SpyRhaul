@@ -92,8 +92,10 @@ GameObject:
   - component: {fileID: 114347165039693936}
   - component: {fileID: 114480037284958698}
   - component: {fileID: 114742793116480542}
+  - component: {fileID: 114356938964249680}
   - component: {fileID: 50193740704429284}
   - component: {fileID: 58526099116101824}
+  - component: {fileID: 114490355486049184}
   m_Layer: 9
   m_Name: SpyRhaul
   m_TagString: Player
@@ -134,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1748423752777570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8, y: 6.8, z: 5}
+  m_LocalPosition: {x: -40.28, y: 21.12, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4536801347624506}
@@ -275,10 +277,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1748423752777570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1974bcef09614ccf9f7fc44ddcab820, type: 3}
+  m_Script: {fileID: 11500000, guid: 72f1343c492334780af1ad8d50cdb3cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDamage: 30
 --- !u!114 &114347165039693936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -287,7 +288,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1748423752777570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ea06ccf8ed9e44159f0aa4f1ba9926f, type: 3}
+  m_Script: {fileID: 11500000, guid: fc62a7b8f4b02422abdf8d946e6f1962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prototype: {fileID: 1421252982327080, guid: 64f0c2dac276a47d394b2ee6a63350e6, type: 2}
+  cooldownTime: 2
+--- !u!114 &114356938964249680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1748423752777570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ff86f30fc45e4232a9078084a082818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114480037284958698
@@ -298,9 +312,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1748423752777570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b1472340d0374432a09f4bae626599b, type: 3}
+  m_Script: {fileID: 11500000, guid: 14c7fb9201e7e4e7dbf8343c4600fc37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyDamage: 25
 --- !u!114 &114484858651399414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -312,6 +327,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1874989c5e2da094ea00112c6a895694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114490355486049184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1748423752777570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 665af4d58671a4252b91fa0ad8d08176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bankCoefficient: 300
+  frameRate: 0.5
+  queueLen: 5
 --- !u!114 &114565484509672308
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -320,12 +349,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1748423752777570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 149dee38d77a445a8a83cfbb9c445c75, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7fd69edcfb34b69adca1d19691d00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   backwardSpeed: 0.3
   turnSpeed: 2
-  constantForwardSpeed: 2
+  constantForwardSpeed: 10
 --- !u!114 &114708841436535468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -334,12 +363,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1748423752777570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e574a910f0a824ac1a2b4dfb837f37cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 58d361a3a4550497282062e295d221a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intelCount: 0
-  initialKnownIntelCount: 3
-  unfoundIntelsList: []
 --- !u!114 &114742793116480542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -348,12 +374,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1748423752777570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1922ac178361642d5bdcc16b9c60bc53, type: 3}
+  m_Script: {fileID: 11500000, guid: bbfd36f4c886545bc8b254a79720c401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bankCoefficient: 300
-  frameRate: 0.5
-  queueLen: 5
 --- !u!114 &114813819043597318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -362,9 +385,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1748423752777570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ae7c9546b37b4a0db223a445f9b6f30, type: 3}
+  m_Script: {fileID: 11500000, guid: 4bcff968d196845939f0b73069d5221a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  intelCount: 0
+  initialKnownIntelCount: 3
+  totalIntelInWorld: 0
+  unfoundIntelsList: []
 --- !u!114 &114968083026909444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -373,11 +400,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1748423752777570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f197b37fa06654c2f97dc1b370b59eea, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e3a06d01728c4b07a099842c012c0e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prototype: {fileID: 1421252982327080, guid: 64f0c2dac276a47d394b2ee6a63350e6, type: 2}
-  cooldownTime: 2
 --- !u!212 &212987050351503272
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -412,7 +437,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: a8078d4719f864eb8b50023f9f8ac990, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

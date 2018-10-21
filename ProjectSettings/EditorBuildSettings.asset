@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DeathScene.unity
     guid: aaca9dbab90724aee869c0cc9494901d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: faffce66898f143adbaf560de3ffe79c
+    path: Assets/Scenes/EthanScene.unity
+    guid: 2a454540c43104578b4c370d7debd399
   m_configObjects: {}

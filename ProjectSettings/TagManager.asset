@@ -9,6 +9,7 @@ TagManager:
   - Fireball
   - Cloud
   - Nests
+  - Intel
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Cloud
   - House
   - Spotlight
-  - 
+  - BlockCollider
   - 
   - 
   - 

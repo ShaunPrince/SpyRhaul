@@ -26,7 +26,7 @@ public class HUD_Manager : MonoBehaviour {
 	void Start () {
 		textHealth = transform.Find("HealthCounter").GetComponent<Text>();	
 		textIntel = transform.Find("IntelCounter").GetComponent<Text>();	
-		imageIntel = transform.Find("IntelIcon").gameObject;
+		//imageIntel = transform.Find("IntelIcon").gameObject;
 		if(imageIntel != null){
 			textIntel.gameObject.SetActive(false); //turn off the text if we don't need it
 			imageIntel.gameObject.SetActive(false);
