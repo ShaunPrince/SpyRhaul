@@ -8,6 +8,7 @@ TagManager:
   - House
   - Fireball
   - Cloud
+  - Intel
   layers:
   - Default
   - TransparentFX
