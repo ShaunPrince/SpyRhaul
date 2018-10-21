@@ -6,7 +6,7 @@
  <tileset firstgid="4" source="Cloud.tmx"/>
  <tileset firstgid="5" source="Nest.tmx"/>
  <tileset firstgid="6" source="CloudII.tmx"/>
- <layer id="1" name="Grass" width="1000" height="1000" visible="0">
+ <layer id="1" name="Grass" width="1000" height="1000">
   <data encoding="csv">
    <chunk x="-176" y="-144" width="16" height="16">
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
@@ -7138,7 +7138,7 @@
 </chunk>
   </data>
  </layer>
- <layer id="7" name="Nests" width="1000" height="1000" visible="0">
+ <layer id="7" name="Nests" width="1000" height="1000">
   <data encoding="csv">
    <chunk x="-16" y="-128" width="16" height="16">
 0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,
