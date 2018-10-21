@@ -31,7 +31,7 @@ public class DealDamage : MonoBehaviour {
             Destroy(collision.gameObject);
             if(health.Health <= 0){
                 //Death Screen
-                SceneManager.LoadScene(sceneName: "DeathScene");
+                SceneManager.LoadScene(sceneName: "MainMenu");
 
             }
         }

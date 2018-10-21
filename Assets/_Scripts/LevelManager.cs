@@ -6,7 +6,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
 
 	public void StartGame(){
-		SceneManager.LoadScene("MainScene");
+		SceneManager.LoadScene("EthanScene");
 	}
 
 }
