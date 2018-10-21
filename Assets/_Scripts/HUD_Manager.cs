@@ -5,23 +5,35 @@ using UnityEngine.UI;
 
 public class HUD_Manager : MonoBehaviour {
 
+	//GUI ELEMENTS
 	private Text textHealth;
 	private Text textIntel;
+	private GameObject imageIntel;
+	private List<GameObject> pipsIntel;
 	private Text textCooldown;
 	private Text textReturns;
 	private Text textScore;
+	//OBJECTS REFERENCED TO COLLECT DATA
 	public PlayerHealth healthManager;
 	public IntelManager intelManager;
 	public FireballSpawner cooldownManager;
 	public IntelCollector returnManager;
 	private IntelCollector scoreManager;
+	//CONFIGURATIONS
+	public int IconOffset = 48;
 
 	// Use this for initialization
 	void Start () {
 		textHealth = transform.Find("HealthCounter").GetComponent<Text>();	
 		textIntel = transform.Find("IntelCounter").GetComponent<Text>();	
+		imageIntel = transform.Find("IntelIcon").gameObject;
+		if(imageIntel != null){
+			textIntel.gameObject.SetActive(false); //turn off the text if we don't need it
+			imageIntel.gameObject.SetActive(false);
+			pipsIntel = new List<GameObject>();
+		}
 		textCooldown = transform.Find("CooldownCounter").GetComponent<Text>();
-		textReturns = transform.Find("ReturnsCounter").GetComponent<Text>();
+		textReturns = transform.Find("Returns").Find("ReturnsCounter").GetComponent<Text>();
 		textScore = transform.Find("ScoreCounter").GetComponent<Text>();
 		scoreManager = returnManager;
 	}
@@ -40,7 +52,25 @@ public class HUD_Manager : MonoBehaviour {
 	}
 
 	void dispIntel(int intel){
-		textIntel.text = "Intel: " + intel.ToString(); 
+		if(imageIntel != null){
+			while(pipsIntel.Count > intel){ //remove pips to go down to correct value
+				GameObject removed = pipsIntel[pipsIntel.Count-1];
+				pipsIntel.Remove(removed);
+				GameObject.Destroy(removed);
+			}
+			while(pipsIntel.Count < intel){ //add pips to fill up to correct value
+				Vector3 pos = imageIntel.transform.position;
+				if(pipsIntel.Count > 0){
+					Vector3 lastPos = pipsIntel[pipsIntel.Count - 1].transform.position;
+					pos = new Vector3(lastPos.x + IconOffset, lastPos.y, lastPos.z);
+				}
+				GameObject added = GameObject.Instantiate(imageIntel, pos, imageIntel.transform.rotation, transform);
+				added.SetActive(true);
+				pipsIntel.Add(added);
+			}
+		}else{
+			textIntel.text = "Intel: " + intel.ToString(); 
+		}
 	}
 
 	void dispCooldown(float cd){
