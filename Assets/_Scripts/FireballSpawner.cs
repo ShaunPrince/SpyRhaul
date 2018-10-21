@@ -12,7 +12,6 @@ public class FireballSpawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		spawnPoint = transform.Find("FireryMaw");
-		lastFire = Time.time - 314;
 	}
 	
 	// Update is called once per frame

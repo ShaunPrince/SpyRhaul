@@ -24,12 +24,6 @@ public class IntelCollector : MonoBehaviour {
 		}
 	}
 
-	public int TotalReturns = 3;
-
-	void Start(){
-		_returnsLeft = TotalReturns;
-	}
-
 	private void score(int intelCount){
 		_score += intelCount * ReturnsLeft;
 	}
