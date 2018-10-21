@@ -173,4 +173,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 1213098035851240, guid: 09e9c8ff7f1e34d81a53ad16299e745f,
     type: 2}
-  arrowColor: {r: 1, g: 0.63752663, b: 0, a: 1}
+  arrowColor: {r: 1, g: 0.63752663, b: 0, a: 0.5882353}
+  knownToPlayer: 0
