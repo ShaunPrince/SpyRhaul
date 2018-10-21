@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class inCloud : MonoBehaviour {
 
-    bool areInCloud;
-    public GameObject spotlight;
-	//TURN THIS INTO THAT GET/SET SHIT and THEN MAKE SEPARATE SCRIPT USING GET/SET SHIT
-    private void Awake()
-    {
-        areInCloud = false;
+    public bool Cloud{
+        get;
+        set;
+
     }
+	//TURN THIS INTO THAT GET/SET SHIT and THEN MAKE SEPARATE SCRIPT USING GET/SET SHIT
     void Start () {
 		
 	}
@@ -19,14 +18,4 @@ public class inCloud : MonoBehaviour {
 	void Update () {
 		
 	}
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-
-        if(collision.tag == "Cloud"){
-            Debug.Log("YOU HAVE ENTERED THE CLOUD");
-            areInCloud = true;
-            Physics2D.IgnoreLayerCollision(9, 11, true);
-        }
-    }
 }
