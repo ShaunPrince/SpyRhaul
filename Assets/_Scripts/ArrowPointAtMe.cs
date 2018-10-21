@@ -24,7 +24,7 @@ public class ArrowPointAtMe : MonoBehaviour
         myArrow = GameObject.Instantiate<GameObject>(arrowPrefab, canvas.transform);
         myArrow.transform.localPosition = new Vector3(0, 0, 0);
         //UnityEditor.EditorApplication.isPaused = true;
-        knownToPlayer = false;
+        //knownToPlayer = false;
     }
 
 	// Use this for initialization
@@ -60,6 +60,8 @@ public class ArrowPointAtMe : MonoBehaviour
         }
 
     }
+
+
 
      
 

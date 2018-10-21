@@ -43,7 +43,7 @@ public class SpawnerManager : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-
+            Debug.Log("There is a PLAYER");
             Instantiate(enemy, spawnPoints[nearestSpawnIndex].transform.position, spawnPoints[nearestSpawnIndex].transform.rotation);
         }
 
