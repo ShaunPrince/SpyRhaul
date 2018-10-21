@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4203021748354484}
   - component: {fileID: 212044701518997660}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: SpotlightSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 58531613971538240}
   - component: {fileID: 114706956847049506}
   - component: {fileID: 114255469592499488}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Spotlight
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1830187098142992}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5171122a14ff54cfaaa595fec4ab1d27, type: 3}
   m_Name: 
@@ -169,7 +169,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.9490534, g: 0.9622642, b: 0.39215687, a: 0.7254902}
+  m_Color: {r: 0.94912016, g: 0.9528302, b: 0.17528482, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
