@@ -6,7 +6,7 @@ public class inCloud : MonoBehaviour {
 
     bool areInCloud;
     public GameObject spotlight;
-	// Use this for initialization
+	//TURN THIS INTO THAT GET/SET SHIT and THEN MAKE SEPARATE SCRIPT USING GET/SET SHIT
     private void Awake()
     {
         areInCloud = false;
@@ -20,18 +20,13 @@ public class inCloud : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
+
         if(collision.tag == "Cloud"){
-
+            Debug.Log("YOU HAVE ENTERED THE CLOUD");
             areInCloud = true;
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), spotlight.GetComponent<Collider2D>());
+            Physics2D.IgnoreLayerCollision(9, 11, true);
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        areInCloud = false;
-        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), spotlight.GetComponent<Collider2D>(), false);
     }
 }
