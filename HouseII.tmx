@@ -4,6 +4,7 @@
  <tile id="0">
   <properties>
    <property name="unity:isTrigger" type="bool" value="true"/>
+   <property name="unity:sortingOrder " type="int" value="-100"/>
   </properties>
  </tile>
 </tileset>
