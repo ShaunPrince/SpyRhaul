@@ -8,6 +8,7 @@ TagManager:
   - House
   - Fireball
   - Cloud
+  - Nests
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - Enemy
   - Player
   - Cloud
-  - 
-  - 
+  - House
+  - Spotlight
   - 
   - 
   - 

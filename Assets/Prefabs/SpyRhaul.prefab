@@ -73,6 +73,8 @@ GameObject:
   - component: {fileID: 114813819043597318}
   - component: {fileID: 114232578105149950}
   - component: {fileID: 114968083026909444}
+  - component: {fileID: 114347165039693936}
+  - component: {fileID: 114480037284958698}
   - component: {fileID: 50193740704429284}
   - component: {fileID: 58526099116101824}
   m_Layer: 9
@@ -89,7 +91,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1116439160555088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.28, z: 0}
+  m_LocalPosition: {x: -0.033, y: 0.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4536056682338454}
@@ -102,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1748423752777570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.7, y: 7.7, z: 5}
+  m_LocalPosition: {x: 38.86, y: 25.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4536801347624506}
@@ -231,6 +233,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDamage: 30
+--- !u!114 &114347165039693936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1748423752777570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea06ccf8ed9e44159f0aa4f1ba9926f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114480037284958698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1748423752777570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1472340d0374432a09f4bae626599b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114484858651399414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,6 +292,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intelCount: 0
+  initialKnownIntelCount: 3
+  unfoundIntelsList: []
 --- !u!114 &114813819043597318
 MonoBehaviour:
   m_ObjectHideFlags: 1
