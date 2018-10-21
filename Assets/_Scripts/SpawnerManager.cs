@@ -68,9 +68,6 @@ public class SpawnerManager : MonoBehaviour
         {
             Debug.Log("There is a PLAYER");
             Instantiate(enemy, spawnPoints[nearestSpawnIndex].transform.position, spawnPoints[nearestSpawnIndex].transform.rotation);
-            Instantiate(enemy, spawnPoints[nearestSpawnIndex].transform.position, spawnPoints[nearestSpawnIndex].transform.rotation);
-            Instantiate(enemy, spawnPoints[nearestSpawnIndex].transform.position, spawnPoints[nearestSpawnIndex].transform.rotation);
-            Instantiate(enemy, spawnPoints[nearestSpawnIndex].transform.position, spawnPoints[nearestSpawnIndex].transform.rotation);
         }
 
     }
