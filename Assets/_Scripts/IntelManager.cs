@@ -17,15 +17,7 @@ public class IntelManager : MonoBehaviour
         GameObject[] unfoundIntels = GameObject.FindGameObjectsWithTag("Intel");
         unfoundIntelsList = new List<GameObject>(unfoundIntels);
 
-        for(int i = 0; i < initialKnownIntelCount; ++i)
-        {
-            Debug.Log(unfoundIntelsList.Capacity);
-            selectedIndex = Random.Range(0, unfoundIntelsList.Capacity);
-            Debug.Log(unfoundIntelsList[selectedIndex]);
-            unfoundIntelsList[selectedIndex].GetComponent<ArrowPointAtMe>().knownToPlayer = true;
-            unfoundIntelsList.RemoveAt(selectedIndex);
-            unfoundIntelsList.TrimExcess(); 
-        }
+        LearnXRandomNewIntels(initialKnownIntelCount);
         
 
         intelCount = 0;
@@ -53,6 +45,8 @@ public class IntelManager : MonoBehaviour
 
             //change color so player knows this point has been taken already
             col.GetComponentInParent<Renderer>().material.color = Color.green;
+            unfoundIntelsList.Remove(col.gameObject.transform.parent.gameObject);
+            unfoundIntelsList.TrimExcess();
 
             Destroy(col.GetComponentInParent<Rigidbody2D>());
             Destroy(col);
@@ -62,8 +56,35 @@ public class IntelManager : MonoBehaviour
 
     }
 
+        public void LearnXRandomNewIntels(int x)
+    {
+        if (x > unfoundIntelsList.Capacity)
+        {
+            x = unfoundIntelsList.Capacity;
+            Debug.Log("All intels Found");
+        }
+        for (int i = 0; i < x; ++i)
+        {
+            Debug.Log("Current UnfoundIntelslist.Capacity " + unfoundIntelsList.Capacity);
+            selectedIndex = Random.Range(0, unfoundIntelsList.Capacity);
+            Debug.Log("Current intel at random index " + unfoundIntelsList[selectedIndex]);
+            unfoundIntelsList[selectedIndex].GetComponent<ArrowPointAtMe>().knownToPlayer = true;
+            unfoundIntelsList.RemoveAt(selectedIndex);
+            unfoundIntelsList.TrimExcess();
+        }
 
+    }
 
+    public void AddIntel()
+    {
+        ++intelCount;
+    }
+
+    public void DropIntel()
+    {
+        LearnXRandomNewIntels(intelCount);
+        intelCount = 0;
+    }
     //void OnTriggerEnter2d(Collision2D col)
     //{
     //    Debug.Log("HIT Trigger");
@@ -79,13 +100,4 @@ public class IntelManager : MonoBehaviour
     //}
 
 
-    public void AddIntel()
-    {
-        ++intelCount;
-    }
-
-    public void DropIntel()
-    {
-        intelCount = 0;
-    }
 }

@@ -274,14 +274,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114784610909598098, guid: 65cd161f05aad4508ad0edda141bc818,
         type: 2}
-      propertyPath: cooldownManager
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114784610909598098, guid: 65cd161f05aad4508ad0edda141bc818,
-        type: 2}
       propertyPath: intelManager
       value: 
       objectReference: {fileID: 1151203138}
+    - target: {fileID: 114784610909598098, guid: 65cd161f05aad4508ad0edda141bc818,
+        type: 2}
+      propertyPath: healthManager
+      value: 
+      objectReference: {fileID: 1151203142}
+    - target: {fileID: 114784610909598098, guid: 65cd161f05aad4508ad0edda141bc818,
+        type: 2}
+      propertyPath: returnManager
+      value: 
+      objectReference: {fileID: 774337575}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65cd161f05aad4508ad0edda141bc818, type: 2}
   m_IsPrefabAsset: 0
@@ -356,6 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c40ee47fafc4c3797d05f1f8dee17f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TotalReturns: 3
 --- !u!212 &774337576
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -473,7 +479,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 797ceebf56dad4384afaf29845cb79af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intelCount: 0
+  intelCount: 3
+  initialKnownIntelCount: 0
+  unfoundIntelsList: []
 --- !u!114 &1151203139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -879,6 +887,6 @@ SpriteRenderer:
   m_Size: {x: 9.97, y: 10.77}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
