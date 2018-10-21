@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IntelCollector : MonoBehaviour {
 
-	private int _score;
+    private int _score;
 	public int Score{
 		get{
 			return _score;
@@ -38,5 +38,12 @@ public class IntelCollector : MonoBehaviour {
 				intelSource.DropIntel();
 			}
 		}
+        other.GetComponent<PlayerHealth>().Health = 100;
+        Debug.Log(other.GetComponent<PlayerHealth>().Health);
+        GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        for (int i = 0; i < allEnemies.Length; i++){
+
+            Destroy(allEnemies[i]);
+        }
 	}
 }
