@@ -6,6 +6,7 @@ public class IntelManager : MonoBehaviour
 {
     public int intelCount;
     public int initialKnownIntelCount;
+    public int totalIntelInWorld;
 
     public List<GameObject> unfoundIntelsList;
 
@@ -16,6 +17,7 @@ public class IntelManager : MonoBehaviour
     {
         GameObject[] unfoundIntels = GameObject.FindGameObjectsWithTag("Intel");
         unfoundIntelsList = new List<GameObject>(unfoundIntels);
+        totalIntelInWorld = unfoundIntelsList.Capacity;
 
         LearnXRandomNewIntels(initialKnownIntelCount);
         
@@ -44,7 +46,7 @@ public class IntelManager : MonoBehaviour
             col.gameObject.GetComponentInParent<ArrowPointAtMe>().knownToPlayer = false;
 
             //change color so player knows this point has been taken already
-            col.GetComponentInParent<Renderer>().material.color = Color.green;
+            col.gameObject.transform.parent.GetChild(1).gameObject.SetActive(false);
             unfoundIntelsList.Remove(col.gameObject.transform.parent.gameObject);
             unfoundIntelsList.TrimExcess();
 
