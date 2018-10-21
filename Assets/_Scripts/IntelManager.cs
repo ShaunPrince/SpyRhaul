@@ -6,6 +6,7 @@ public class IntelManager : MonoBehaviour
 {
     public int intelCount;
     public int initialKnownIntelCount;
+    public int totalIntelInWorld;
 
     public List<GameObject> unfoundIntelsList;
 
@@ -16,6 +17,7 @@ public class IntelManager : MonoBehaviour
     {
         GameObject[] unfoundIntels = GameObject.FindGameObjectsWithTag("Intel");
         unfoundIntelsList = new List<GameObject>(unfoundIntels);
+        totalIntelInWorld = unfoundIntelsList.Capacity;
 
         LearnXRandomNewIntels(initialKnownIntelCount);
         
